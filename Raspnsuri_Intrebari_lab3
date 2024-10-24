@@ -1,0 +1,11 @@
+
+1.	Ce este anti-aliasing? Prezentați această tehnică pe scurt.
+Anti-aliasing este o tehnică utilizată pentru a reduce efectul de „jaggies” (marginile ascuțite) în grafică. Acesta funcționează prin estomparea pixelilor de margine pentru a crea o tranziție mai lină între culori. Aceasta se poate realiza prin metode precum MSAA (Multisample Anti-Aliasing) sau FXAA (Fast Approximate Anti-Aliasing).
+2.	Care este efectul rulării comenzii GL.LineWidth(float)? Dar pentru GL.PointSize(float)? Funcționează în interiorul unei zone GL.Begin()?
+GL.LineWidth(float) modifică grosimea liniilor desenate, iar GL.PointSize(float) modifică dimensiunea punctelor. Aceste comenzi funcționează în interiorul unei zone GL.Begin(), dar pot fi resetate sau afectate de alte setări înainte de a desena alte primitive.
+3.	Răspundeți la următoarele întrebări (utilizați ca referință eventual și tutorii OpenGL Nate Robbins):
+•  LineLoop: Desenează linii care formează un cerc închis, conectând ultimul vertex cu primul.
+•  LineStrip: Desenează o serie de linii conectate între ele, fiecare vertex fiind conectat la următorul.
+•  TriangleFan: Desenează un set de triunghiuri care au un vertex comun (central), iar fiecare nou vertex formează un nou triunghi cu cele două vertexuri anterioare.
+•  TriangleStrip: Similar cu TriangleFan, dar fiecare nou vertex formează un triunghi cu ultimele două vertexuri, permițând un număr mai mic de vertexuri pentru a descrie o formă complexă.
+
