@@ -1,0 +1,26 @@
+1.	Ce este un viewport?
+Viewport-ul este o zonă rectangulară a ferestrei în care OpenGL va desena conținutul. Acesta definește regiunea desenabilă și mapează coordonatele normale ale dispozitivului în coordonate de fereastră.
+
+2.	Ce reprezintă conceptul de frames per seconds din punctul de vedere al bibliotecii OpenGL?
+FPS se referă la câte cadre sunt randate într-o secundă. Un FPS mai mare duce în general la animații mai fluide și o mai bună reacție
+
+3.	Când este rulată metoda OnUpdateFrame()?
+Metoda OnUpdateFrame() este apelată o dată pe cadru și este utilizată de obicei pentru actualizarea logicii jocului, cum ar fi pozițiile obiectelor, gestionarea inputului și alte calcule.
+
+4.	Ce este modul imediat de randare?
+Modul imediat este un stil de randare în OpenGL în care vârfurile sunt trimise la GPU unul câte unul, în timp real, folosind apeluri de funcții imediate (precum GL.Begin() și GL.End()). Este ușor de utilizat, dar ineficient din punct de vedere al performanței
+
+5.	Care este ultima versiune de OpenGL care acceptă modul imediat?
+Modul imediat a fost depreciat în OpenGL 3.1 și nu mai este acceptat în profilele de bază. Totuși, este încă disponibil în profilele de compatibilitate până la OpenGL 3.5
+
+6.	Când este rulată metoda OnRenderFrame()?
+Metoda OnRenderFrame() este apelată după OnUpdateFrame() și este responsabilă pentru randarea stării curente a aplicației pe ecran
+
+7.	De ce este nevoie ca metoda OnResize() să fie executată cel puțin o dată?
+Metoda OnResize() configurează viewport-ul și matricea de proiecție în funcție de dimensiunea ferestrei curente. Asigură că randarea este corect scalată la noile dimensiuni ale ferestrei
+
+8.	Ce reprezintă parametrii metodei CreatePerspectiveFieldOfView() și care este domeniul de valoripentru aceștia?
+•	Field of view (FOV): Unghiul vertical de vedere, de obicei în radiani (de exemplu, MathHelper.PiOver4 pentru 45 de grade).
+•	Aspect ratio: Raportul dintre lățime și înălțime al viewport-ului.
+•	Near clipping plane: Distanța de la privitor până la cele mai apropiate obiecte care vor fi randate.
+•	Far clipping plane: Distanța de la privitor până la cele mai îndepărtate obiecte care vor fi randate.
